@@ -4,13 +4,19 @@ using std::cout;
 using std::cin;
 
 
+int doubleDigitValue(int digit){
+    int doubleDigit = digit * 2;
+    int sum;
+    if(doubleDigit > 10) sum = 1+doubleDigit % 10;
+    else sum = doubleDigit;
+    return sum;
+}
+
 int main(){
     int digit;
     cout << "Enter a single digit number 0-9" << "\n";
     cin >> digit;
-    int doubleDigit = digit * 2;
-    int sum;
-    if(doubleDigit >= 10) sum = 1 + doubleDigit % 10;
-    else sum = doubleDigit;
+
+    auto sum = doubleDigitValue(digit);
     cout << "Sum of digits in double number: " << sum << "\n";
 }
