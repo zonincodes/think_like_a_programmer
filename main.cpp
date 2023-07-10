@@ -13,10 +13,10 @@ int doubleDigitValue(int digit){
 }
 
 int main(){
-    int digit;
+    char digit;
     cout << "Enter a single digit number 0-9" << "\n";
     cin >> digit;
-
+    digit -= '0';
     auto sum = doubleDigitValue(digit);
     cout << "Sum of digits in double number: " << sum << "\n";
 }
